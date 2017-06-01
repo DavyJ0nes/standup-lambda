@@ -1,0 +1,7 @@
+{
+  "lambda": {
+    "role": "standup-notifier-executor",
+    "name": "standup-notifier",
+    "region": "eu-central-1"
+  }
+}

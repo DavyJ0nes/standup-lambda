@@ -1,0 +1,31 @@
+{
+  "name": "standup-notifier",
+  "version": "0.0.1",
+  "description": "Simple Lambda that runs from a schedule to push a notification to HipChat room to get people to submit their Standup report.",
+  "author": "Davy Jones 2016",
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DavyJ0nes/standup-lambda"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "schedule": "claudia add-scheduled-event --event event.json --name HipChat-Standup --cron '5 11 ? * 1-5 *'",
+    "deploy": "claudia update"
+  },
+  "files": [
+    ".*lib/*",
+    "*.js",
+    "*hipchat*"
+  ],
+  "keywords": [
+    "aws"
+  ],
+  "devDependencies": {
+    "claudia": "^1.x"
+  },
+  "dependencies": {
+    "config.json": "0.0.4"
+  }
+}
